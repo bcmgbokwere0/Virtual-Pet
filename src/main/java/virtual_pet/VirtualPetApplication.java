@@ -43,7 +43,7 @@ public class VirtualPetApplication {
             boolean goodInput = false;
             for (;;) {
             if (!gameplay.hasNextInt()) {
-                System.out.println("You must enter an number");
+                System.out.println("You must enter a number.");
             } else {
             option = gameplay.nextInt();
             if (option <= 6 && option > 0){
@@ -80,11 +80,8 @@ public class VirtualPetApplication {
                 break;
             }
             Pet.tick();
-            System.out.println("The nights goes by...");
         }
         gameplay.close();
         System.out.println("Thanks for Playing, " + Pet.getName() + " will miss you :).");
-
-        // add a counter for how many times the loop goes around, more spacing between prompts, easier legibility, clean wording on methods.
     }
 }

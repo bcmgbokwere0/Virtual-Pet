@@ -2,7 +2,6 @@ package virtual_pet;
 
 public class VirtualPet {
     private String name;
-    private int age;
     private int hunger;
     private int thirst;
     private int tiredness;
@@ -20,14 +19,6 @@ public class VirtualPet {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 
     public int getHunger() {
@@ -79,26 +70,34 @@ public class VirtualPet {
     }
 
     public void feed() {
+        System.out.println("----------------------------------------------------------");
         System.out.println("You gave " + getName() + " their favorite food! They seemed to really enjoy it...");
         System.out.println("Hunger Level Increased by 20.");
+        System.out.println("----------------------------------------------------------");
         setHunger(getHunger() + 20);
     }
 
     public void drink() {
+        System.out.println("----------------------------------------------------------");
         System.out.println("You gave " + getName() + " a glass of water. They really chugged it down...");
         System.out.println("Thirst Level Increased by 20.");
+        System.out.println("----------------------------------------------------------");
         setThirst(getThirst() + 20);
     }
 
     public void Play() {
+        System.out.println("----------------------------------------------------------");
         System.out.println("You and " + getName() + " played a fun game of virtual volleyball. \033[3m You let them win...\033[0m");
         System.out.println("Mood Increased by 30.");
+        System.out.println("----------------------------------------------------------");
         setMood(getMood() + 30);
     }
 
     public void Sleep() {
+        System.out.println("----------------------------------------------------------");
         System.out.println("You tucked " + getName() + " into their virtual bed, they really got comfortable...");
         System.out.println(getName() + " became well rested.");
+        System.out.println("----------------------------------------------------------");
         setTiredness(100);
     }
 
